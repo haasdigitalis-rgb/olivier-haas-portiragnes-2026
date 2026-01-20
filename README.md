@@ -1,4 +1,4 @@
-# Site de Campagne - Olivier HAAS 2026
+e# Site de Campagne - Olivier HAAS 2026
 ## "La Force du Renouveau" - Portiragnes
 
 Site officiel de campagne pour les élections municipales de Portiragnes 2026.
@@ -12,3 +12,4 @@ Site déployé sur Vercel.
 
 ## Contact
 contact@olivierhaas-portiragnes2026.fr
+Version 1.0 - Site déployé
