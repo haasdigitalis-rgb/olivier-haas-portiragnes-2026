@@ -1,0 +1,13 @@
+{
+  "name": "olivier-haas-portiragnes-2026",
+  "version": "1.0.0",
+  "description": "Site de campagne municipale 2026 - Olivier HAAS pour Portiragnes",
+  "scripts": {
+    "dev": "npx serve .",
+    "build": "echo 'Static site - no build required'"
+  },
+  "keywords": ["campagne", "municipales", "portiragnes", "2026"],
+  "author": "Olivier HAAS",
+  "license": "UNLICENSED",
+  "private": true
+}

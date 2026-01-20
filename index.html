@@ -1,0 +1,1027 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Olivier HAAS pour Portiragnes 2026 - Une commune heureuse. Programme innovant pour transformer Portiragnes et Portiragnes-Plage.">
+    <title>Olivier HAAS pour Portiragnes - Une commune heureuse</title>
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary: #1a1a1a;
+            --secondary: #0066FF;
+            --accent: #FF4D4D;
+            --bg-light: #FAFAFA;
+            --text-dark: #1a1a1a;
+            --text-gray: #666;
+            --white: #FFFFFF;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            line-height: 1.5;
+            color: var(--text-dark);
+            background: var(--white);
+            -webkit-font-smoothing: antialiased;
+        }
+
+        /* Navigation */
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+            z-index: 1000;
+            padding: 1.5rem 0;
+        }
+
+        .nav-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 3rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.1rem;
+            font-weight: 700;
+            color: var(--primary);
+            text-decoration: none;
+            letter-spacing: -0.3px;
+        }
+
+        .nav-menu {
+            display: flex;
+            list-style: none;
+            gap: 3rem;
+            align-items: center;
+        }
+
+        .nav-menu a {
+            text-decoration: none;
+            color: var(--text-dark);
+            font-weight: 500;
+            font-size: 0.95rem;
+            transition: color 0.2s;
+        }
+
+        .nav-menu a:hover {
+            color: var(--secondary);
+        }
+
+        .nav-cta {
+            background: var(--accent);
+            color: var(--white) !important;
+            padding: 0.8rem 1.8rem;
+            border-radius: 8px;
+            font-weight: 600;
+            transition: all 0.2s;
+        }
+
+        .nav-cta:hover {
+            background: #FF3333;
+            transform: translateY(-1px);
+        }
+
+        /* Hero Section */
+        .hero {
+            margin-top: 80px;
+            position: relative;
+            min-height: 85vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(135deg, #0066FF 0%, #0052CC 100%);
+            color: var(--white);
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: url('data:image/svg+xml,<svg width="100" height="100" xmlns="http://www.w3.org/2000/svg"><defs><pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse"><path d="M 40 0 L 0 0 0 40" fill="none" stroke="rgba(255,255,255,0.05)" stroke-width="1"/></pattern></defs><rect width="100" height="100" fill="url(%23grid)"/></svg>');
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 1;
+            text-align: center;
+            max-width: 1100px;
+            padding: 0 2rem;
+        }
+
+        .hero-tagline {
+            font-size: 1.1rem;
+            font-weight: 600;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            margin-bottom: 2rem;
+            opacity: 0.9;
+        }
+
+        .hero h1 {
+            font-size: 6rem;
+            font-weight: 900;
+            line-height: 1;
+            margin-bottom: 2rem;
+            letter-spacing: -3px;
+        }
+
+        .hero-subtitle {
+            font-size: 1.8rem;
+            font-weight: 300;
+            margin-bottom: 3rem;
+            opacity: 0.95;
+            letter-spacing: -0.5px;
+        }
+
+        .hero-cta {
+            display: inline-block;
+            background: var(--white);
+            color: var(--secondary);
+            padding: 1.2rem 3rem;
+            border-radius: 10px;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 1.1rem;
+            transition: all 0.2s;
+            letter-spacing: -0.3px;
+        }
+
+        .hero-cta:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+        }
+
+        /* Quick Actions Section */
+        .actions-section {
+            padding: 6rem 2rem;
+            background: var(--white);
+        }
+
+        .section-header {
+            text-align: center;
+            max-width: 800px;
+            margin: 0 auto 5rem;
+        }
+
+        .section-title {
+            font-size: 3.5rem;
+            font-weight: 900;
+            margin-bottom: 1.5rem;
+            letter-spacing: -2px;
+            color: var(--primary);
+        }
+
+        .section-subtitle {
+            font-size: 1.3rem;
+            color: var(--text-gray);
+            font-weight: 400;
+        }
+
+        .actions-grid {
+            max-width: 1300px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 2rem;
+        }
+
+        .action-card {
+            background: var(--bg-light);
+            border-radius: 16px;
+            padding: 2.5rem 2rem;
+            text-align: left;
+            transition: all 0.3s;
+            cursor: pointer;
+            text-decoration: none;
+            color: var(--text-dark);
+            border: 2px solid transparent;
+        }
+
+        .action-card:hover {
+            transform: translateY(-8px);
+            background: var(--white);
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.12);
+            border-color: var(--secondary);
+        }
+
+        .action-card h3 {
+            font-size: 1.3rem;
+            font-weight: 700;
+            margin-bottom: 0.8rem;
+            letter-spacing: -0.5px;
+        }
+
+        .action-card p {
+            font-size: 0.95rem;
+            color: var(--text-gray);
+            line-height: 1.6;
+        }
+
+        /* Programme Section */
+        .programme-section {
+            padding: 6rem 2rem;
+            background: var(--bg-light);
+        }
+
+        .programme-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 5rem;
+            align-items: center;
+        }
+
+        .programme-image {
+            width: 100%;
+            height: 600px;
+            background: linear-gradient(135deg, #E8E8E8, #D4D4D4);
+            border-radius: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 8rem;
+        }
+
+        .programme-text h2 {
+            font-size: 3rem;
+            font-weight: 900;
+            margin-bottom: 1rem;
+            letter-spacing: -1.5px;
+        }
+
+        .programme-highlight {
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: var(--secondary);
+            margin-bottom: 2rem;
+            letter-spacing: -0.5px;
+        }
+
+        .programme-text p {
+            font-size: 1.2rem;
+            color: var(--text-gray);
+            line-height: 1.8;
+            margin-bottom: 2rem;
+        }
+
+        .btn-primary {
+            display: inline-block;
+            background: var(--primary);
+            color: var(--white);
+            padding: 1.2rem 2.5rem;
+            border-radius: 10px;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 1rem;
+            transition: all 0.2s;
+            letter-spacing: -0.3px;
+        }
+
+        .btn-primary:hover {
+            background: #000;
+            transform: translateY(-2px);
+        }
+
+        /* Qui suis-je Section */
+        .bio-section {
+            padding: 6rem 2rem;
+            background: var(--white);
+        }
+
+        .bio-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 5rem;
+            align-items: center;
+        }
+
+        .bio-image {
+            width: 100%;
+            height: 600px;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.15);
+        }
+
+        .bio-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        /* Team Section */
+        .team-section {
+            padding: 6rem 2rem;
+            background: var(--bg-light);
+        }
+
+        .team-content {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .team-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2.5rem;
+            margin-bottom: 4rem;
+        }
+
+        .team-card {
+            background: var(--white);
+            border-radius: 20px;
+            padding: 3rem 2.5rem;
+            text-align: center;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+            transition: all 0.3s;
+        }
+
+        .team-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 12px 40px rgba(0, 0, 0, 0.12);
+        }
+
+        .team-icon {
+            font-size: 3.5rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .team-card h3 {
+            font-size: 1.5rem;
+            font-weight: 800;
+            margin-bottom: 1rem;
+            letter-spacing: -0.5px;
+        }
+
+        .team-card p {
+            font-size: 1.05rem;
+            color: var(--text-gray);
+            line-height: 1.7;
+        }
+
+        .team-cta {
+            text-align: center;
+            background: var(--white);
+            padding: 3rem;
+            border-radius: 20px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+        }
+
+        .btn-secondary-outline {
+            display: inline-block;
+            background: transparent;
+            color: var(--primary);
+            border: 2px solid var(--primary);
+            padding: 1.2rem 2.5rem;
+            border-radius: 10px;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 1rem;
+            transition: all 0.2s;
+            letter-spacing: -0.3px;
+        }
+
+        .btn-secondary-outline:hover {
+            background: var(--primary);
+            color: var(--white);
+            transform: translateY(-2px);
+        }
+
+        .bio-text h2 {
+            font-size: 3rem;
+            font-weight: 900;
+            margin-bottom: 2rem;
+            letter-spacing: -1.5px;
+        }
+
+        .bio-text p {
+            font-size: 1.2rem;
+            color: var(--text-gray);
+            line-height: 1.8;
+            margin-bottom: 2rem;
+        }
+
+        .quote {
+            font-size: 1.4rem;
+            font-style: italic;
+            color: var(--primary);
+            border-left: 4px solid var(--secondary);
+            padding-left: 2rem;
+            margin: 3rem 0;
+            font-weight: 500;
+            line-height: 1.6;
+        }
+
+        /* Participation Section */
+        .participation-section {
+            padding: 8rem 2rem;
+            background: linear-gradient(135deg, #2ECC71 0%, #27AE60 100%);
+            color: var(--white);
+            text-align: center;
+        }
+
+        .participation-section h2 {
+            font-size: 4rem;
+            font-weight: 900;
+            margin-bottom: 1.5rem;
+            letter-spacing: -2px;
+        }
+
+        .participation-section p {
+            font-size: 1.4rem;
+            margin-bottom: 3rem;
+            opacity: 0.95;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+            line-height: 1.7;
+        }
+
+        .btn-white {
+            background: var(--white);
+            color: #27AE60;
+            padding: 1.2rem 3rem;
+            border-radius: 10px;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 1.1rem;
+            display: inline-block;
+            transition: all 0.2s;
+        }
+
+        .btn-white:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Engagement Section */
+        .engagement-section {
+            padding: 6rem 2rem;
+            background: var(--white);
+        }
+
+        .engagement-grid {
+            max-width: 1300px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2.5rem;
+            margin-top: 4rem;
+        }
+
+        .engagement-card {
+            background: var(--bg-light);
+            border-radius: 20px;
+            padding: 3rem;
+            text-decoration: none;
+            color: var(--text-dark);
+            transition: all 0.3s;
+            border: 2px solid transparent;
+        }
+
+        .engagement-card:hover {
+            transform: translateY(-8px);
+            background: var(--white);
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.12);
+            border-color: var(--secondary);
+        }
+
+        .engagement-icon {
+            font-size: 3.5rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .engagement-card h3 {
+            font-size: 1.8rem;
+            font-weight: 800;
+            margin-bottom: 1rem;
+            letter-spacing: -0.5px;
+        }
+
+        .engagement-card p {
+            font-size: 1.05rem;
+            color: var(--text-gray);
+            line-height: 1.7;
+            margin-bottom: 1.5rem;
+        }
+
+        .engagement-link {
+            color: var(--secondary);
+            font-weight: 600;
+            font-size: 1rem;
+        }
+
+        /* Newsletter */
+        .newsletter-section {
+            padding: 5rem 2rem;
+            background: var(--primary);
+            color: var(--white);
+        }
+
+        .newsletter-container {
+            max-width: 700px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .newsletter-section h3 {
+            font-size: 2.5rem;
+            font-weight: 800;
+            margin-bottom: 1rem;
+            letter-spacing: -1px;
+        }
+
+        .newsletter-section p {
+            font-size: 1.2rem;
+            margin-bottom: 2.5rem;
+            opacity: 0.9;
+        }
+
+        .newsletter-form {
+            display: flex;
+            gap: 1rem;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .newsletter-input {
+            flex: 1;
+            padding: 1.2rem 1.5rem;
+            border: none;
+            border-radius: 8px;
+            font-size: 1rem;
+            font-family: 'Inter', sans-serif;
+            background: rgba(255, 255, 255, 0.95);
+        }
+
+        .newsletter-button {
+            background: var(--accent);
+            color: var(--white);
+            padding: 1.2rem 2.5rem;
+            border: none;
+            border-radius: 8px;
+            font-size: 1rem;
+            font-weight: 700;
+            cursor: pointer;
+            transition: all 0.2s;
+            white-space: nowrap;
+        }
+
+        .newsletter-button:hover {
+            background: #FF3333;
+            transform: translateY(-2px);
+        }
+
+        /* Footer */
+        footer {
+            background: var(--primary);
+            color: var(--white);
+            padding: 4rem 2rem 2rem;
+        }
+
+        .footer-content {
+            max-width: 1300px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding-bottom: 2rem;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .footer-links {
+            display: flex;
+            gap: 3rem;
+        }
+
+        .footer-links a {
+            color: rgba(255, 255, 255, 0.7);
+            text-decoration: none;
+            font-size: 0.95rem;
+            transition: color 0.2s;
+        }
+
+        .footer-links a:hover {
+            color: var(--white);
+        }
+
+        .footer-bottom {
+            max-width: 1300px;
+            margin: 0 auto;
+            padding-top: 2rem;
+            text-align: center;
+            color: rgba(255, 255, 255, 0.5);
+            font-size: 0.9rem;
+        }
+
+        /* Responsive */
+        @media (max-width: 1200px) {
+            .actions-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .engagement-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .team-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 968px) {
+            .hero h1 {
+                font-size: 3.5rem;
+            }
+
+            .section-title {
+                font-size: 2.5rem;
+            }
+
+            .nav-menu {
+                display: none;
+            }
+
+            .actions-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .programme-content,
+            .bio-content {
+                grid-template-columns: 1fr;
+            }
+
+            .engagement-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .team-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .newsletter-form {
+                flex-direction: column;
+            }
+
+            .footer-content {
+                flex-direction: column;
+                gap: 2rem;
+                text-align: center;
+            }
+
+            .footer-links {
+                flex-direction: column;
+                gap: 1rem;
+            }
+        }
+
+        @media (max-width: 640px) {
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+
+            .hero-subtitle {
+                font-size: 1.2rem;
+            }
+
+            .section-title {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav>
+        <div class="nav-container">
+            <a href="/" class="logo">LA FORCE DU RENOUVEAU</a>
+            <ul class="nav-menu">
+                <li><a href="#programme">Programme</a></li>
+                <li><a href="#olivier">Qui suis-je ?</a></li>
+                <li><a href="#portiragnes">Portiragnes à cœur ouvert</a></li>
+                <li><a href="#engagement" class="nav-cta">J'agis</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <div class="hero-tagline">ÉLECTIONS MUNICIPALES 2026</div>
+            <h1>La Force du Renouveau<br>Portiragnes</h1>
+            <div class="hero-subtitle">Un projet concret pour une commune heureuse</div>
+            <a href="#programme" class="hero-cta">Découvrir le programme</a>
+        </div>
+    </section>
+
+    <!-- Quick Actions -->
+    <section class="actions-section">
+        <div class="section-header">
+            <h2 class="section-title">J'agis tout de suite</h2>
+            <p class="section-subtitle">8 actions simples pour soutenir La Force du Renouveau</p>
+        </div>
+        
+        <div class="actions-grid">
+            <a href="#newsletter" class="action-card">
+                <h3>Je m'inscris</h3>
+                <p>Recevez les actualités de la campagne et restez informé</p>
+            </a>
+
+            <a href="#" class="action-card">
+                <h3>Je partage</h3>
+                <p>Diffusez le programme sur vos réseaux sociaux</p>
+            </a>
+
+            <a href="#portiragnes" class="action-card">
+                <h3>Je donne mon avis</h3>
+                <p>Participez à Portiragnes à cœur ouvert</p>
+            </a>
+
+            <a href="#" class="action-card">
+                <h3>J'envoie un message</h3>
+                <p>SMS, email ou réseaux sociaux</p>
+            </a>
+
+            <a href="#engagement" class="action-card">
+                <h3>Je milite</h3>
+                <p>Rejoignez nos équipes sur le terrain</p>
+            </a>
+
+            <a href="#" class="action-card">
+                <h3>Je recommande</h3>
+                <p>Parrainez un proche habitant Portiragnes</p>
+            </a>
+
+            <a href="#" class="action-card">
+                <h3>Je télécharge</h3>
+                <p>Le programme complet en PDF</p>
+            </a>
+
+            <a href="#" class="action-card">
+                <h3>Je contacte</h3>
+                <p>Une question ? Notre équipe vous répond</p>
+            </a>
+        </div>
+
+        <div style="text-align: center; margin-top: 4rem;">
+            <a href="#engagement" class="btn-primary">Je veux faire plus !</a>
+        </div>
+    </section>
+
+    <!-- Programme Section -->
+    <section id="programme" class="programme-section">
+        <div class="programme-content">
+            <div class="programme-image">📋</div>
+            <div class="programme-text">
+                <h2>Les Priorités du Renouveau<br>Portiragnes</h2>
+                <div class="programme-highlight">INNOVATION • PRAGMATISME • EFFICACITÉ</div>
+                <p>
+                    Ce projet présente un ensemble d'axes structurants construits à partir des réalités du territoire : 
+                    une population avec une forte proportion de seniors, un taux de chômage élevé, une économie saisonnière 
+                    typique du sud de la France, et une continuité municipale de trois mandats.
+                </p>
+                <p>
+                    <strong>Les priorités proposées répondent à ces enjeux :</strong>
+                </p>
+                <ul style="list-style: none; padding-left: 0; margin: 1.5rem 0;">
+                    <li style="padding: 0.5rem 0; padding-left: 2rem; position: relative;">
+                        <span style="position: absolute; left: 0; color: var(--accent); font-weight: 700;">✓</span>
+                        Sécuriser notre quotidien
+                    </li>
+                    <li style="padding: 0.5rem 0; padding-left: 2rem; position: relative;">
+                        <span style="position: absolute; left: 0; color: var(--accent); font-weight: 700;">✓</span>
+                        Préserver notre santé et notre cadre de vie
+                    </li>
+                    <li style="padding: 0.5rem 0; padding-left: 2rem; position: relative;">
+                        <span style="position: absolute; left: 0; color: var(--accent); font-weight: 700;">✓</span>
+                        Cultiver notre bien-vivre
+                    </li>
+                    <li style="padding: 0.5rem 0; padding-left: 2rem; position: relative;">
+                        <span style="position: absolute; left: 0; color: var(--accent); font-weight: 700;">✓</span>
+                        Assurer un suivi rigoureux des finances
+                    </li>
+                    <li style="padding: 0.5rem 0; padding-left: 2rem; position: relative;">
+                        <span style="position: absolute; left: 0; color: var(--accent); font-weight: 700;">✓</span>
+                        Favoriser le dynamisme économique du village
+                    </li>
+                </ul>
+                <a href="#" class="btn-primary">Découvrir le programme</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Qui suis-je Section -->
+    <section id="olivier" class="bio-section">
+        <div class="bio-content">
+            <div class="bio-text">
+                <h2>Qui est<br>Olivier HAAS ?</h2>
+                <p>
+                    Né à Béziers et installé à Portiragnes depuis 2016, j'entretiens depuis mon enfance un lien profond 
+                    avec ce village où j'ai toujours passé une partie de mon temps. C'est par <strong>attachement personnel</strong> 
+                    que j'ai choisi d'y vivre, sensible à son identité, à son cadre de vie et à l'esprit de sa communauté.
+                </p>
+                <p>
+                    Diplômé d'un <strong>Master en Tourisme – Management & Ingénierie Touristique</strong> (CIAT, Grande École), 
+                    j'ai développé une expertise Bac+6 en stratégie territoriale, développement de projets et ingénierie touristique.
+                </p>
+                <p>
+                    Pendant près de <strong>10 ans en tant que cadre supérieur</strong>, j'ai occupé des fonctions de direction 
+                    de la communication puis de directeur général, pilotant des équipes, des projets structurants et des démarches 
+                    de transformation au sein d'organisations publiques et privées.
+                </p>
+                <p>
+                    Mon parcours s'est également enrichi d'<strong>engagements économiques et locaux</strong> : Président élu de 
+                    l'association <strong>Les Vitrines de Béziers pendant 6 ans</strong>, élu à la <strong>Chambre de Commerce 
+                    et d'Industrie de Béziers durant 4 ans</strong>, et <strong>Conseiller municipal d'opposition à Portiragnes</strong>.
+                </p>
+                <p>
+                    Entrepreneur spécialisé dans les <strong>solutions digitales et l'innovation</strong>, j'accompagne aujourd'hui 
+                    divers acteurs dans la mise en place de solutions innovantes et opérationnelles.
+                </p>
+                <div class="quote">
+                    "Mon parcours associe management, communication, développement territorial, expertise économique 
+                    et connaissance du terrain, avec un ancrage personnel fort à Portiragnes."
+                </div>
+                <a href="#" class="btn-primary">Rejoindre l'équipe</a>
+            </div>
+            <div class="bio-image">
+                <img src="olivier-haas.png" alt="Olivier HAAS" 
+                     onerror="this.onerror=null; this.style.display='none'; this.parentElement.innerHTML='<div style=\'display:flex;align-items:center;justify-content:center;height:100%;background:linear-gradient(135deg,#001F3F,#0074D9);color:white;font-size:5rem;\'>👨‍💼</div>';"
+                     style="width: 100%; height: 100%; object-fit: cover; border-radius: 20px;">
+            </div>
+        </div>
+    </section>
+
+    <!-- Équipe Section -->
+    <section class="team-section">
+        <div class="section-header">
+            <h2 class="section-title">Une équipe forte<br>en construction</h2>
+            <p class="section-subtitle">Des femmes et des hommes engagés pour Portiragnes</p>
+        </div>
+
+        <div class="team-content">
+            <div class="team-grid">
+                <div class="team-card">
+                    <div class="team-icon">👥</div>
+                    <h3>Diversité des profils</h3>
+                    <p>Entrepreneurs, cadres, artisans, fonctionnaires, retraités : une équipe qui reflète Portiragnes</p>
+                </div>
+
+                <div class="team-card">
+                    <div class="team-icon">🎯</div>
+                    <h3>Compétences variées</h3>
+                    <p>Expertise en économie locale, environnement, social, urbanisme, et innovation</p>
+                </div>
+
+                <div class="team-card">
+                    <div class="team-icon">❤️</div>
+                    <h3>Engagement sincère</h3>
+                    <p>Des habitants passionnés par leur commune et déterminés à la faire avancer</p>
+                </div>
+            </div>
+
+            <div class="team-cta">
+                <p style="font-size: 1.3rem; margin-bottom: 2rem; color: var(--text-gray);">
+                    Vous souhaitez <strong>rejoindre l'équipe</strong> ou <strong>vous présenter sur la liste</strong> ?
+                </p>
+                <div style="display: flex; gap: 1.5rem; justify-content: center; flex-wrap: wrap;">
+                    <a href="#engagement" class="btn-primary">Je rejoins l'équipe</a>
+                    <a href="#" class="btn-secondary-outline">Je me porte candidat</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Participation Section -->
+    <section id="portiragnes" class="participation-section">
+        <h2>Portiragnes à cœur ouvert</h2>
+        <p>
+            Donnez votre avis sur notre commune ! Qu'est-ce qui ne va pas dans votre quartier ? 
+            Quelles sont vos priorités pour Portiragnes et Portiragnes-Plage ?
+        </p>
+        <a href="portiragnes-coeur-ouvert.html" class="btn-white">💬 Je donne mon avis</a>
+    </section>
+
+    <!-- Engagement Section -->
+    <section id="engagement" class="engagement-section">
+        <div class="section-header">
+            <h2 class="section-title">Je veux faire plus</h2>
+            <p class="section-subtitle">5 façons de s'engager pour transformer Portiragnes</p>
+        </div>
+
+        <div class="engagement-grid">
+            <a href="#" class="engagement-card">
+                <div class="engagement-icon">🤝</div>
+                <h3>Je milite</h3>
+                <p>Rejoignez nos équipes sur le terrain pour faire campagne et rencontrer les habitants</p>
+                <span class="engagement-link">En savoir plus →</span>
+            </a>
+
+            <a href="#" class="engagement-card">
+                <div class="engagement-icon">📞</div>
+                <h3>Je phone</h3>
+                <p>Participez au phoning pour toucher un maximum d'habitants, même à distance</p>
+                <span class="engagement-link">En savoir plus →</span>
+            </a>
+
+            <a href="#" class="engagement-card">
+                <div class="engagement-icon">🗳️</div>
+                <h3>Je candidate</h3>
+                <p>Devenez candidat aux élections municipales avec La Force du Renouveau</p>
+                <span class="engagement-link">En savoir plus →</span>
+            </a>
+
+            <a href="#" class="engagement-card">
+                <div class="engagement-icon">💡</div>
+                <h3>Je propose</h3>
+                <p>Partagez vos idées et suggestions pour enrichir notre programme</p>
+                <span class="engagement-link">En savoir plus →</span>
+            </a>
+
+            <a href="#" class="engagement-card">
+                <div class="engagement-icon">👥</div>
+                <h3>Je convaincs</h3>
+                <p>Recommandez un proche habitant Portiragnes, notre équipe prend le relais</p>
+                <span class="engagement-link">En savoir plus →</span>
+            </a>
+        </div>
+    </section>
+
+    <!-- Newsletter -->
+    <section id="newsletter" class="newsletter-section">
+        <div class="newsletter-container">
+            <h3>Restez informé(e)</h3>
+            <p>Inscrivez-vous pour recevoir les actualités de la campagne</p>
+            <form class="newsletter-form" id="newsletter-form">
+                <input type="email" name="email" placeholder="Votre email" required class="newsletter-input">
+                <button type="submit" class="newsletter-button">Je m'inscris</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div>
+                <strong>LA FORCE DU RENOUVEAU</strong><br>
+                Olivier HAAS pour Portiragnes 2026
+            </div>
+            <div class="footer-links">
+                <a href="#">Mentions légales</a>
+                <a href="#">Politique de confidentialité</a>
+                <a href="#">Contact</a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2026 La Force du Renouveau - Olivier HAAS</p>
+        </div>
+    </footer>
+
+    <script>
+        // Newsletter form
+        document.getElementById('newsletter-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('Merci pour votre inscription ! Vous recevrez bientôt nos actualités.');
+            this.reset();
+        });
+
+        // Smooth scroll
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                const href = this.getAttribute('href');
+                if (href !== '#' && href.length > 1) {
+                    e.preventDefault();
+                    const target = document.querySelector(href);
+                    if (target) {
+                        target.scrollIntoView({
+                            behavior: 'smooth',
+                            block: 'start'
+                        });
+                    }
+                }
+            });
+        });
+    </script>
+</body>
+</html>
